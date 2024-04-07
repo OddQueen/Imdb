@@ -1,4 +1,4 @@
-
+import * as fs from 'node:fs';
 import { Imdb } from "./imdb";
 import { Movie } from "./movie";
 
@@ -18,3 +18,10 @@ console.log("Películas:");
 imdb.peliculas.forEach((movies, index) => {
     console.log(`  Película ${index + 1}: ${movies.title}`);  
 });
+
+// PASO 6
+// punto 1
+let string = JSON.stringify(imdb.peliculas);
+
+// punto 2
+fs.writeFileSync("imdbBBDD.json", string);
