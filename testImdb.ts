@@ -31,3 +31,9 @@ let lectura = fs.readFileSync("imdbBBDD.json", "utf8");
 let objeto = JSON.parse(lectura);
 let imdb2 = new Imdb(objeto);
 console.log(imdb2);
+
+// PASO 7
+imdb.escribirEnFicheroJSON("fichero.json");
+
+let nuevoImdb = imdb.obtenerInstanciaIMDB("fichero.json");
+console.log(nuevoImdb);
