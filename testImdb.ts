@@ -25,3 +25,9 @@ let string = JSON.stringify(imdb.peliculas);
 
 // punto 2
 fs.writeFileSync("imdbBBDD.json", string);
+
+// punto 4
+let lectura = fs.readFileSync("imdbBBDD.json", "utf8");
+let objeto = JSON.parse(lectura);
+let imdb2 = new Imdb(objeto);
+console.log(imdb2);
